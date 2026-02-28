@@ -56,3 +56,24 @@ function sendToWhatsApp(){
   message += "%0ATotal: " + total;
   window.open("https://wa.me/212660833382?text=" + message);
 }
+// جميع المنتجات
+const products = document.querySelectorAll('.product');
+
+products.forEach(product => {
+  const qtyInput = product.querySelector('.quantity');
+  const priceSpan = product.querySelector('.price');
+  const originalPrice = parseFloat(product.dataset.price);
+
+  qtyInput.addEventListener('input', () => {
+    let qty = parseInt(qtyInput.value);
+
+    if (qty >= 10) {
+      // خصم 10% إذا 10 وحدات أو أكثر
+      const discountedPrice = originalPrice * 0.9 * qty;
+      priceSpan.textContent = discountedPrice.toFixed(2);
+    } else {
+      // السعر الطبيعي
+      priceSpan.textContent = (originalPrice * qty).toFixed(2);
+    }
+  });
+});
