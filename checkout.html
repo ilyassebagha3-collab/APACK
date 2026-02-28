@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - APACK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">Complete Your Order</h1>
+
+<div id="orderSummary"></div>
+
+<div class="form">
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="text" id="phone" placeholder="Phone Number" required>
+<input type="text" id="city" placeholder="City" required>
+
+<button class="btn" onclick="sendToWhatsApp()">Send Order</button>
+</div>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/212660833382" class="whatsapp-float" target="_blank">💬 WhatsApp</a>
+
+<script src="script.js"></script>
+</body>
+</html>

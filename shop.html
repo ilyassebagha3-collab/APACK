@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APACK Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">Our Bottles</h1>
+
+<div class="products">
+
+  <div class="product">
+      <img src="1.jpg" alt="50ml bottle">
+      <h3>50ml Bottle 🍼</h3>
+      <p class="price" data-price="20">20 DH</p>
+      <label>Quantity: </label>
+      <input type="number" min="0" value="0" class="qty" onchange="calculateTotal()">
+  </div>
+
+  <div class="product">
+      <img src="2.jpg" alt="100ml bottle">
+      <h3>100ml Bottle 🏺</h3>
+      <p class="price" data-price="30">30 DH</p>
+      <label>Quantity: </label>
+      <input type="number" min="0" value="0" class="qty" onchange="calculateTotal()">
+  </div>
+
+  <div class="product">
+      <img src="3.jpg" alt="Luxury gold bottle">
+      <h3>Luxury Gold Bottle ✨</h3>
+      <p class="price" data-price="45">45 DH</p>
+      <label>Quantity: </label>
+      <input type="number" min="0" value="0" class="qty" onchange="calculateTotal()">
+  </div>
+
+  <div class="product">
+      <img src="4.jpg" alt="Small luxury bottle">
+      <h3>Small Luxury Bottle 💎</h3>
+      <p class="price" data-price="25">25 DH</p>
+      <label>Quantity: </label>
+      <input type="number" min="0" value="0" class="qty" onchange="calculateTotal()">
+  </div>
+
+  <div class="product">
+      <img src="5.jpg" alt="Elegant perfume bottle">
+      <h3>Elegant Bottle 🏵</h3>
+      <p class="price" data-price="35">35 DH</p>
+      <label>Quantity: </label>
+      <input type="number" min="0" value="0" class="qty" onchange="calculateTotal()">
+  </div>
+
+  <div class="product">
+      <img src="6.jpg" alt="Premium perfume bottle">
+      <h3>Premium Bottle 🌟</h3>
+      <p class="price" data-price="50">50 DH</p>
+      <label>Quantity: </label>
+      <input type="number" min="0" value="0" class="qty" onchange="calculateTotal()">
+  </div>
+
+</div>
+
+<h2>Total: <span id="total">0 DH</span></h2>
+
+<button class="btn" onclick="goToCheckout()">Shop Now</button>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/212660833382" class="whatsapp-float" target="_blank">💬 WhatsApp</a>
+
+<script src="script.js"></script>
+</body>
+</html>
