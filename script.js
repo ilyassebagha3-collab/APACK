@@ -77,3 +77,44 @@ products.forEach(product => {
     }
   });
 });
+function calculateTotal() {
+  let total = 0;
+  products.forEach(product => {
+    const price = parseFloat(product.querySelector('.price').textContent);
+    total += price;
+  });
+  document.getElementById('total').textContent = total.toFixed(2);
+}
+
+// Event listener لكل تغيير فالكمية
+products.forEach(product => {
+  product.querySelector('.quantity').addEventListener('input', calculateTotal);
+});
+// جميع المنتجات
+const products = document.querySelectorAll('.product');
+
+products.forEach(product => {
+  const qtyInput = product.querySelector('.quantity');
+  const priceSpan = product.querySelector('.price');
+  const discountSpan = product.querySelector('.discount');
+  const originalPrice = parseFloat(product.dataset.price);
+
+  qtyInput.addEventListener('input', () => {
+    let qty = parseInt(qtyInput.value);
+
+    if (qty >= 10) {
+      // السعر مع خصم 10%
+      const discountedPrice = originalPrice * 0.9 * qty;
+      priceSpan.textContent = discountedPrice.toFixed(2);
+
+      // عرض -10%
+      discountSpan.style.display = "inline";
+    } else {
+      // السعر الطبيعي
+      priceSpan.textContent = (originalPrice * qty).toFixed(2);
+
+      // اخفاء -10%
+      discountSpan.style.display = "none";
+    }
+  });
+});
